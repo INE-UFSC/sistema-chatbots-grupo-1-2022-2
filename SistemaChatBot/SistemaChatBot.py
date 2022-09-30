@@ -46,7 +46,7 @@ class SistemaChatBot:
                 self.__bot.dizer(self.__bot.despedida())
                 self.__end = True
             else:
-                self.__bot.executa_comando(op)
+                print(self.__bot.executa_comando(op))
 
     def inicio(self):
         ##mostra mensagem de boas-vindas do sistema
