@@ -5,9 +5,9 @@ import random as r
 
 class Bot(ABC):
 
-    def __init__(self, nome,):
+    def __init__(self, nome, comandos = None):
         self.__nome = nome
-        self.__comandos = {}
+        self.__comandos = {} if comandos is None else comandos
 
     @property
     def nome(self):
