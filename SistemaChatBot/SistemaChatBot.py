@@ -1,14 +1,14 @@
-from Bots.Bot import Bot
+# from Bots.Bot import Bot
 
 class SistemaChatBot:
     def __init__(self,nomeEmpresa,lista_bots):
         self.__empresa=nomeEmpresa
 
         ##verificar se a lista de bots contém apenas bots
-        if all(isinstance(obj, Bot) for obj in lista_bots):
-            self.__lista_bots=lista_bots
-        else:
-            print("A lista de bots não contem apenas bots")
+        #if all(isinstance(obj, Bot) for obj in lista_bots):
+        self.__lista_bots=lista_bots
+        #else:
+        #    print("A lista de bots não contem apenas bots")
 
         self.__bot = None
         self.__end = False
@@ -23,7 +23,7 @@ class SistemaChatBot:
         print("Os chatbots disponíveis no momento são:")
         i = 0
         for bot in self.__lista_bots:
-            print(f"{i} - Bot: {bot.nome()} - Mensagem de apresentação: {bot.apresentacao()}")
+            print(f"{i} - Bot: {bot.nome} - Mensagem de apresentação: {bot.apresentacao()}")
             i += 1
 
     def escolhe_bot(self):
