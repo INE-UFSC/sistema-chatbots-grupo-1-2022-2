@@ -39,9 +39,14 @@ class SistemaChatBot:
     def le_envia_comando(self):
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
         op = input()
-        self.__bot.executa_comando(op)
-        if op == "-1":
-            self.__end = True
+        ##faz validacao do comando
+        ### Se o comando estiver entre [-1, numero maximo de comando] o comando eh valido
+        if int(op) <= len(self.__bot.comandos) and >= -1:
+            if op == "-1":
+                self.__bot.dizer(self.__bot.despedida())
+                self.__end = True
+            else:
+                self.__bot.executa_comando(op)
 
     def inicio(self):
         ##mostra mensagem de boas-vindas do sistema
