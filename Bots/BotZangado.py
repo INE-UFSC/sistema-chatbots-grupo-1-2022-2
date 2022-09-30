@@ -21,7 +21,7 @@ class BotZangado(Bot):
             
             
     def boas_vindas(self):
-        return f"Nao consigo acreditar que eu tenho que fazer novamente...\n De qualquer maneira, boas-vindas caro cliente. Espero que a sua estadia seja breve e dolorosa."
+        return f"Nao consigo acreditar que eu tenho que fazer isso novamente...\n De qualquer maneira, boas-vindas caro cliente. Espero que a sua estadia seja breve e dolorosa."
 
     def despedida(self) -> str:
         return "Finalmente!! Espero nunca te ver novamente, seu chato!"
