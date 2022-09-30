@@ -2,9 +2,9 @@ from Bots.Bot import Bot
 
 
 COMANDOS = {
-    "Bom dia": "Bom dia! Este é um belo dia para aprendern não?",
+    "Bom dia": "Bom dia! Este é um belo dia para aprender, não?",
     "Qual o seu nome?":"",
-    "Quero um conselho":"Não há nada importante que o conhecimento, Buscador. Nunca se esqueça",
+    "Quero um conselho":"Não há nada mais importante que o conhecimento, Buscador. Nunca se esqueça disso",
     "Do que você gosta?":"Livros, Buscador! Eles são a essência do aprendizado e possuem segredos inimagináveis para os não-iniciados",
     "Como você está se sentindo?":"Curioso. Há tantos segredos ainda não descobertos...",
 }
@@ -13,7 +13,7 @@ COMANDOS = {
 class BotInteligente(Bot):
     def __init__(self,nome, comandos = COMANDOS):
         #atualiza o nome
-        COMANDOS["Qual o seu nome?"] = f"{nome}, mestre dos magos e rei dos dragões" 
+        comandos["Qual o seu nome?"] = f"{nome}, mestre dos magos e rei dos dragões" 
         
         
         super().__init__(nome, comandos)
