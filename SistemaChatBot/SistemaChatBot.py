@@ -37,7 +37,7 @@ class SistemaChatBot:
 
     def le_envia_comando(self):
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
-        op = int(input())
+        op = input()
         self.__bot.executa_comando(op)
 
     def inicio(self):
