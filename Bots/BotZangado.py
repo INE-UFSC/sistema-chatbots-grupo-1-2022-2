@@ -17,7 +17,7 @@ class BotZangado(Bot):
 
 
     def apresentacao(self):
-        return f"Olá, meu nome é {self.__nome}. Eu estou tendo um péssimo dia, então por favor não faça nada para me irritar."
+        return f"Olá, meu nome é {self.nome}. Eu estou tendo um péssimo dia, então por favor não faça nada para me irritar."
             
             
     def boas_vindas(self):

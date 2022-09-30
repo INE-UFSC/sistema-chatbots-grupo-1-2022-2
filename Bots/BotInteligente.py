@@ -20,7 +20,7 @@ class BotInteligente(Bot):
 
 
     def apresentacao(self):
-        return f"Olá, meu nome é {self.__nome}, detentor de todo o conhecimento existente"
+        return f"Olá, meu nome é {self.nome}, detentor de todo o conhecimento existente"
             
             
     def boas_vindas(self):
