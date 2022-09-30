@@ -11,6 +11,7 @@ class SistemaChatBot:
             print("A lista de bots não contem apenas bots")
 
         self.__bot = None
+        self.__end = False
 
     def boas_vindas(self):
         ##mostra mensagem de boas vindas do sistema
@@ -39,6 +40,8 @@ class SistemaChatBot:
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
         op = input()
         self.__bot.executa_comando(op)
+        if op == "-1":
+            self.__end = True
 
     def inicio(self):
         ##mostra mensagem de boas-vindas do sistema
@@ -51,7 +54,7 @@ class SistemaChatBot:
         self.mostra_menu()
         self.escolhe_bot()
 
-        ## TODO Rever esse loop infinito
-        while True:
+        ## Enquanto não acabar
+        while not self.__end:
             self.mostra_comandos_bot()
             self.le_envia_comando()
