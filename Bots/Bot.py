@@ -33,7 +33,7 @@ class Bot(ABC):
     def executa_comando(self, cmd: str):
         comandos = list(self.comandos.items())
 
-        pergunta_resposta = comandos.get(int(cmd))
+        pergunta_resposta = comandos[int(cmd)]
 
         if pergunta_resposta is None:
             return "\n".join((

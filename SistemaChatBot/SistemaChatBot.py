@@ -31,6 +31,8 @@ class SistemaChatBot:
         op = int(input("Digite o número do chatbot desejado: "))
         self.__bot = self.__lista_bots[op]
 
+        print(self.__bot.dizer(self.__bot.boas_vindas()))
+
     def mostra_comandos_bot(self):
         ##mostra os comandos disponíveis no bot escolhido
         comandos = self.__bot.mostra_comandos()
