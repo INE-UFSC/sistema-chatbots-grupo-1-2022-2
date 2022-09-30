@@ -42,7 +42,7 @@ class SistemaChatBot:
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
         op = input()
 
-        if not op.isdigit():
+        if not op.isdigit() or op == "-1":
             return
         
         op = int(op)
