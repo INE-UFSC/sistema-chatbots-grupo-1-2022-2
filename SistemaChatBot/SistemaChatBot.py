@@ -42,7 +42,7 @@ class SistemaChatBot:
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
         op = input()
 
-        if not op.isdigit() or op == "-1":
+        if not op.isdigit() and op != "-1":
             return
         
         op = int(op)
@@ -50,11 +50,11 @@ class SistemaChatBot:
         ##faz validacao do comando
         ### Se o comando estiver entre [-1, numero maximo de comando] o comando eh valido
         if op <= len(self.__bot.comandos) and op >= -1:
-            if op == "-1":
+            if op == -1:
                 print(self.__bot.dizer(self.__bot.despedida()))
                 self.__end = True
             else:
-                print(self.__bot.executa_comando(op))
+                print(self.__bot.executa_comando(op - 1))
 
     def inicio(self):
         ##mostra mensagem de boas-vindas do sistema
