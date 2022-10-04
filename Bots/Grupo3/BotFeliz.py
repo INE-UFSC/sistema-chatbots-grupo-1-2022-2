@@ -15,7 +15,7 @@ class BotFeliz(Bot):
         super().__init__(nome, comandos)
 
     def apresentacao(self) -> str:
-        return "Olá, me chamo {}, meu trabalho e lhe ajudar, o que você deseja, grande amigo?"
+        return f"Olá, me chamo {self.nome}, meu trabalho e lhe ajudar, o que você deseja, grande amigo?"
 
     def boas_vindas(self) -> str:
         return "Muito obrigado por me escolher, a partir de hoje serei seu melhor amigoooooooooo :) :)"
