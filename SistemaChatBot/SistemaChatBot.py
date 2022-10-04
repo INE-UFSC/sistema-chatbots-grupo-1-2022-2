@@ -40,7 +40,7 @@ class SistemaChatBot:
 
     def le_envia_comando(self):
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
-        op = input()
+        op = input("Digite o comando desejado (ou -1 para sair): ")
 
         if not (op.isdigit() or op == "-1"):
             return
@@ -64,12 +64,17 @@ class SistemaChatBot:
         ##entra no loop de mostrar comandos do bot e escolher comando do bot até o usuário definir a saída
         ##ao sair mostrar a mensagem de despedida do bot
         self.boas_vindas()
+        print()
+
         self.mostra_menu()
+        print()
+
         self.escolhe_bot()
 
-        print("digite -1 para sair")
         ## Enquanto não acabar
         while not self.__end:
-            
+            print()
             self.mostra_comandos_bot()
+            print()
+            
             self.le_envia_comando()
