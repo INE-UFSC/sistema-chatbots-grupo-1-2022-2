@@ -33,15 +33,7 @@ class Bot(ABC):
     def executa_comando(self, cmd: str):
         comandos = list(self.comandos.items())
 
-        pergunta_resposta = comandos[int(cmd) - 1]
-
-        if pergunta_resposta is None:
-            return "\n".join((
-                self.dizer("Eu não sei o que você disse."),
-                self.mostra_comandos()
-            ))
-        
-        pergunta, resposta = pergunta_resposta
+        pergunta, resposta = comandos[int(cmd) - 1]
         
         return "\n".join((
             f"--> Você disse: {pergunta}",
