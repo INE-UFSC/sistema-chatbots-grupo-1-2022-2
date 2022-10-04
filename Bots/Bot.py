@@ -20,7 +20,6 @@ class Bot(ABC):
     @property
     def comandos(self):
         return self.__comandos
-    
 
     def dizer(self, frase: str):
         return f"--> {self.__nome} diz: {frase}"
@@ -33,13 +32,20 @@ class Bot(ABC):
     def executa_comando(self, cmd: str):
         comandos = list(self.comandos.items())
 
-        pergunta, resposta = comandos[int(cmd) - 1]
-        
+        pergunta_resposta = comandos[int(cmd) - 1]
+
+        if pergunta_resposta is None:
+            return "\n".join((
+                self.dizer("Eu não sei o que você disse."),
+                self.mostra_comandos()
+            ))
+
+        pergunta, resposta = pergunta_resposta
+
         return "\n".join((
             f"--> Você disse: {pergunta}",
             self.dizer(resposta)
         ))
-            
 
     @abstractmethod
     def apresentacao(self):
@@ -48,7 +54,7 @@ class Bot(ABC):
     @abstractmethod
     def boas_vindas(self):
         pass
-    
+
     @abstractmethod
     def despedida(self):
         pass

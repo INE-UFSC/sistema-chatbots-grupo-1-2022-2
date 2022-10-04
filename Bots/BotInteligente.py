@@ -13,19 +13,16 @@ COMANDOS = {
 class BotInteligente(Bot):
     def __init__(self,nome, comandos = COMANDOS):
         #atualiza o nome
-        comandos["Qual o seu nome?"] = f"{nome}, mestre dos magos e rei dos dragões" 
-        
-        
+        comandos["Qual o seu nome?"] = f"{nome}, mestre dos magos e rei dos dragões"
+
         super().__init__(nome, comandos)
 
 
     def apresentacao(self):
         return f"Olá, meu nome é {self.nome}, detentor de todo o conhecimento existente"
-            
-            
+
     def boas_vindas(self):
         return f"Bem-vindo buscador da chama. Pronto para aprender sobre as maravilhas do universo?"
 
     def despedida(self) -> str:
         return "Espero que essa conversa tenha sido tão proveitosa para você quanto foi para mim. Adeus, buscador da chama"
-        
