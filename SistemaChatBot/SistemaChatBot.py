@@ -67,7 +67,9 @@ class SistemaChatBot:
         self.mostra_menu()
         self.escolhe_bot()
 
+        print("digite -1 para sair")
         ## Enquanto não acabar
         while not self.__end:
+            
             self.mostra_comandos_bot()
             self.le_envia_comando()
